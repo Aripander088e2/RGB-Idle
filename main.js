@@ -45,7 +45,7 @@ var PD = 0;
 var BPD = 0;
 var SR = 0;
 var SR5 = 0;
-var SpecPrice = [1, 1, 3, 5, 5, 7, 10, 30, 50, 75, 300, 500, 1500, 2500, 25000, 100000, 1e10, 1e13, 1e25, 1e35, 1e50];
+var SpecPrice = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1e5, 1e8];
 
 function bar(n,r,g,b,elemid) {
     this.name = n;
@@ -56,7 +56,7 @@ function bar(n,r,g,b,elemid) {
     this.draw = function (dif) {
         if (this.mouse == 1) {
             player.CM += 5 * (dif / 1000);
-            increase(Log.multi(Log.multi(click, 50), (dif / 1000)),dif);
+            increase(Log.multi(Log.multi(click, 5000000), (dif / 1000)),dif);
         } else if (this.name == "red" && player.CM > 1 && player.spectrumLevel[3] === 0) {
             player.CM -= 7.5 * (dif / 1000);
             player.CM = Math.max(player.CM, 1);
