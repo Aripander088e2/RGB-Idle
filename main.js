@@ -55,11 +55,11 @@ function bar(n,r,g,b,elemid) {
     this.mouse = 0;
     this.draw = function (dif) {
         if (this.mouse == 1) {
-            player.CM += 5 * (dif / 1000);
-            increase(Log.multi(Log.multi(click, 9e150), (dif / 1000)),dif);
+            player.CM += 5 * (dif / 100);
+            increase(Log.multi(Log.multi(click, 9e150), (dif / 100)),dif);
         } else if (this.name == "red" && player.CM > 1 && player.spectrumLevel[3] === 0) {
-            player.CM -= 7.5 * (dif / 1000);
-            player.CM = Math.max(player.CM, 1);
+            player.CM -= 7.5 * (dif / 100);
+            player.CM = Math.max(player.CM, 9);
         }
         if (Log.get((this.name == "red" ? Log.multi(Log.add(Log.div(auto, 1000 / player.options.fps), (player.bars.red.mouse === 1 ? click : 0)), IR) : (this.name == "green" ? Log.div(Log.multi(Log.multi(Log.add(Log.div(auto, 1000 / player.options.fps), (player.bars.red.mouse === 1 ? click : 0)), IR), IG), 256) : Log.div(Log.multi(Log.multi(Log.multi(Log.add(Log.div(auto, 1000 / player.options.fps), (player.bars.red.mouse === 1 ? click : 0)), IR), IG), IB), 65536))), "log") > Math.log10(32)) this.element.style.width = "100%";
         else this.element.style.width = Log.get(Log.div(this.width,2.56),"num") + "%";
