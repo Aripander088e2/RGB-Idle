@@ -56,7 +56,7 @@ function bar(n,r,g,b,elemid) {
     this.draw = function (dif) {
         if (this.mouse == 1) {
             player.CM += 5 * (dif / 1000);
-            increase(Log.multi(Log.multi(click, 9e15), (dif / 1000)),dif);
+            increase(Log.multi(Log.multi(click, 9e75), (dif / 1000)),dif);
         } else if (this.name == "red" && player.CM > 1 && player.spectrumLevel[3] === 0) {
             player.CM -= 7.5 * (dif / 1000);
             player.CM = Math.max(player.CM, 1);
