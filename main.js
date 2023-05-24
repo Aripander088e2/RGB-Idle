@@ -7,7 +7,7 @@ var player = {
     spliced: { red: 0, green: 0, blue: 0 },
     spectrum: 0,
     specced: 0,
-    spectrumLevel: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,-1,-1,-1,-1,-1,-1],
+    spectrumLevel: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0],
     options: { fast: false, fps: 50, notation: "Default" },
     spectrumTimer: 0,
     wastedTime: 0,
